@@ -20,7 +20,7 @@
                     "title": "Shapes",
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/shapes/all-shapes"
+                        "$ref": "#/$defs/shapes/all-graphic-elements"
                     }
                 }
             },

@@ -17,11 +17,11 @@
                 },
                 "p": {
                     "title": "Position",
-                    "$ref": "#/$defs/properties/position"
+                    "$ref": "#/$defs/properties/position-property"
                 },
                 "s": {
                     "title": "Size",
-                    "$ref": "#/$defs/properties/multi-dimensional"
+                    "$ref": "#/$defs/properties/vector-property"
                 }
             },
             "required": [

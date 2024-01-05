@@ -2,9 +2,10 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "Shape Style",
+    "description": "Describes the visual appearance (like fill and stroke) of neighbouring shapes",
     "allOf": [
         {
-            "$ref": "#/$defs/shapes/shape-element"
+            "$ref": "#/$defs/shapes/graphic-element"
         },
         {
             "type": "object",
@@ -12,7 +13,7 @@
                 "o": {
                     "title": "Opacity",
                     "description": "Opacity, 100 means fully opaque",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 }
             },
             "required": [
@@ -21,4 +22,3 @@
         }
     ]
 }
-

@@ -5,11 +5,13 @@
     "description": "How to handle multiple shapes in trim path",
     "oneOf": [
         {
-            "title": "Individually",
+            "title": "Parallel",
+            "description": "All shapes apply the trim at the same time",
             "const": 1
         },
         {
-            "title": "Simultaneously",
+            "title": "Sequential",
+            "description": "Shapes are considered as a continuous sequence",
             "const": 2
         }
     ]

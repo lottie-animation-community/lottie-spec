@@ -18,16 +18,16 @@
                 "p": {
                     "title": "Position",
                     "description": "Center of the rectangle",
-                    "$ref": "#/$defs/properties/position"
+                    "$ref": "#/$defs/properties/position-property"
                 },
                 "s": {
                     "title": "Size",
-                    "$ref": "#/$defs/properties/multi-dimensional"
+                    "$ref": "#/$defs/properties/vector-property"
                 },
                 "r": {
                     "title": "Rounded",
                     "description": "Rounded corners radius",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 }
             },
             "required": [

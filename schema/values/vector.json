@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "title": "Vector",
+    "description": "An array of numbers",
+    "items": {
+        "type": "number"
+    }
+}
+

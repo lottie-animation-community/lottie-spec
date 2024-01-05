@@ -5,7 +5,7 @@
     "description": "Group transform",
     "allOf": [
         {
-            "$ref": "#/$defs/shapes/shape-element"
+            "$ref": "#/$defs/shapes/graphic-element"
         },
         {
             "$ref": "#/$defs/helpers/transform"

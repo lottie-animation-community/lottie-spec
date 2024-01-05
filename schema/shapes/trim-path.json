@@ -18,16 +18,16 @@
                 "s": {
                     "title": "Start",
                     "description": "Segment start",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 },
                 "e": {
                     "title": "End",
                     "description": "Segment end",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 },
                 "o": {
                     "title": "Offset",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 },
                 "m": {
                     "title": "Multiple",

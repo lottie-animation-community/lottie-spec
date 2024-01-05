@@ -14,11 +14,8 @@
             "type": "array",
             "description": "Array of points, each point is an array of coordinates.\nThese points are along the `in` tangents relative to the corresponding `v`.",
             "items": {
-                "type": "array",
-                "items": {
-                    "type": "number",
-                    "default": []
-                }
+                "$ref": "#/$defs/values/vector",
+                "default": []
             }
         },
         "o": {
@@ -26,11 +23,8 @@
             "type": "array",
             "description": "Array of points, each point is an array of coordinates.\nThese points are along the `out` tangents relative to the corresponding `v`.",
             "items": {
-                "type": "array",
-                "items": {
-                    "type": "number",
-                    "default": []
-                }
+                "$ref": "#/$defs/values/vector",
+                "default": []
             }
         },
         "v": {
@@ -38,11 +32,8 @@
             "description": "Array of points, each point is an array of coordinates.\nThese points are along the bezier path",
             "type": "array",
             "items": {
-                "type": "array",
-                "items": {
-                    "type": "number",
-                    "default": []
-                }
+                "$ref": "#/$defs/values/vector",
+                "default": []
             }
         }
     },

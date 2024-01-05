@@ -1,5 +1,4 @@
 import json
-import pathlib
 
 
 class SchemaPath:
@@ -8,7 +7,7 @@ class SchemaPath:
     """
     def __init__(self, path=None):
         if isinstance(path, str):
-            self.chunks = path.strip("#/").split("/")
+            self.chunks = [int(chunk) if chunk.isdigit() else chunk for chunk in path.strip("#/").split("/")]
         elif path is None:
             self.chunks = []
         elif isinstance(path, SchemaPath):
@@ -35,11 +34,15 @@ class SchemaPath:
 
     @classmethod
     def valid_step(cls, schema, chunk):
-        if isinstance(chunk, int) and (not isinstance(schema, list) or len(schema) <= chunk):
-            return False
+        if isinstance(chunk, int) and isinstance(schema, list):
+            return 0 <= chunk < len(schema)
         elif chunk not in schema:
             return False
         return True
+
+    def ensure_defs(self):
+        if self.chunks[0] != "$defs":
+            self.chunks.insert(0, "$defs")
 
     def __str__(self):
         return "#/" + "/".join(map(str, self.chunks))
@@ -96,3 +99,11 @@ class Schema:
 
     def child(self, key):
         return Schema(SchemaPath.step(self.schema, key), self.path / key)
+
+    @classmethod
+    def load(cls, file):
+        if hasattr(file, "read"):
+            return cls(json.load(file))
+
+        with open(file, "r") as f:
+            return cls(json.load(f))

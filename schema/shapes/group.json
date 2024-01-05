@@ -5,7 +5,7 @@
     "description": "Shape Element that can contain other shapes",
     "allOf": [
         {
-            "$ref": "#/$defs/shapes/shape-element"
+            "$ref": "#/$defs/shapes/graphic-element"
         },
         {
             "type": "object",
@@ -23,7 +23,7 @@
                     "title": "Shapes",
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/shapes/all-shapes"
+                        "$ref": "#/$defs/shapes/all-graphic-elements"
                     }
                 }
             },

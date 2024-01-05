@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "integer",
     "title": "Integer Boolean",
-    "description": "Represents boolean values as an integer. 0 is false, 1 is true.",
+    "description": "Represents boolean values as an integer. `0` is false, `1` is true.",
     "default": 0,
     "examples": [0],
     "enum": [0, 1],

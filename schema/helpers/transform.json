@@ -9,36 +9,36 @@
                 "a": {
                     "title": "Anchor Point",
                     "description": "Anchor point: a position (relative to its parent) around which transformations are applied (ie: center for rotation / scale)",
-                    "$ref": "#/$defs/properties/position"
+                    "$ref": "#/$defs/properties/position-property"
                 },
                 "p": {
                     "title": "Position",
                     "description": "Position / Translation",
-                    "$ref": "#/$defs/properties/position"
+                    "$ref": "#/$defs/properties/position-property"
                 },
                 "r": {
                     "title": "Rotation",
                     "description": "Rotation in degrees, clockwise",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 },
                 "s": {
                     "title": "Scale",
                     "description": "Scale factor, `[100, 100]` for no scaling",
-                    "$ref": "#/$defs/properties/multi-dimensional"
+                    "$ref": "#/$defs/properties/vector-property"
                 },
                 "o": {
                     "title": "Opacity",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 },
                 "sk": {
                     "title": "Skew",
                     "description": "Skew amount as an angle in degrees",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 },
                 "sa": {
                     "title": "Skew Axis",
                     "description": "Direction along which skew is applied, in degrees (`0` skews along the X axis, `90` along the Y axis)",
-                    "$ref": "#/$defs/properties/value"
+                    "$ref": "#/$defs/properties/scalar-property"
                 }
             }
         }

@@ -2,10 +2,10 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "Shape",
-    "description": "Drawable shape",
+    "description": "Drawable shape, defines the actual shape but not the style",
     "allOf": [
         {
-            "$ref": "#/$defs/shapes/shape-element"
+            "$ref": "#/$defs/shapes/graphic-element"
         },
         {
             "type": "object",

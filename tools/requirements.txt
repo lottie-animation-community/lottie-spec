@@ -1,0 +1,5 @@
+mkdocs==1.5.3
+mkdocs-cinder==1.2.0
+graphviz==0.20.1
+# Used for link validations
+lxml==4.9.3

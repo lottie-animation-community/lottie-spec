@@ -10,6 +10,7 @@
             "oneOf":[
                 {
                     "type": "array",
+                    "$ref": "#/$defs/values/vector",
                     "items": {
                         "type": "number",
                         "default": 0,
@@ -32,6 +33,7 @@
             "oneOf": [
                 {
                     "type": "array",
+                    "$ref": "#/$defs/values/vector",
                     "items": {
                         "type": "number",
                         "default": 0,

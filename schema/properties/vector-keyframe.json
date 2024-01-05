@@ -11,10 +11,7 @@
                 "s": {
                     "title": "Value",
                     "description": "Value at this keyframe.",
-                    "type": "array",
-                    "items": {
-                        "type": "number"
-                    }
+                    "$ref": "#/$defs/values/vector"
                 }
             }
         }

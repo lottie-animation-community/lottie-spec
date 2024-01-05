@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "title": "Shape Element",
-    "description": "Base class for all elements of ShapeLayer and Group",
+    "title": "Graphic Element",
+    "description": "Element used to display vector daya in a shape layer",
     "allOf": [
         {
             "$ref": "#/$defs/helpers/visual-object"

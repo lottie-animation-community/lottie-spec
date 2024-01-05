@@ -17,7 +17,7 @@
                 },
                 "c": {
                     "title": "Color",
-                    "$ref": "#/$defs/properties/color-value"
+                    "$ref": "#/$defs/properties/color-property"
                 },
                 "r": {
                     "title": "Fill Rule",

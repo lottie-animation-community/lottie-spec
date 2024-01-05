@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "title": "Shape Property",
-    "description": "An animatable property that holds a Bezier shape",
+    "title": "Color Property",
+    "description": "An animatable property that holds a Color",
     "oneOf": [
         {
             "$comment": "Not animated",
@@ -10,12 +10,12 @@
                 "a": {
                     "title": "Animated",
                     "description": "Whether the property is animated",
-                    "$ref": "#/$defs/helpers/int-boolean",
+                    "$ref": "#/$defs/values/int-boolean",
                     "const": 0
                 },
                 "k": {
                     "title": "Static value",
-                    "$ref": "#/$defs/helpers/bezier"
+                    "$ref": "#/$defs/values/color"
                 }
             }
         },
@@ -25,7 +25,7 @@
                 "a": {
                     "title": "Animated",
                     "description": "Whether the property is animated",
-                    "$ref": "#/$defs/helpers/int-boolean",
+                    "$ref": "#/$defs/values/int-boolean",
                     "const": 1
                 },
                 "k": {
@@ -33,10 +33,10 @@
                     "title": "Keyframes",
                     "description": "Array of keyframes",
                     "items": {
-                            "$ref": "#/$defs/properties/shape-keyframe"
+                            "$ref": "#/$defs/properties/color-keyframe"
+                        }
                     }
                 }
-            }
         }
     ],
     "required": ["a", "k"]

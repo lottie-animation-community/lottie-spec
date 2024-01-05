@@ -17,7 +17,7 @@
                 },
                 "ao": {
                     "title": "Auto Orient",
-                    "$ref": "#/$defs/helpers/int-boolean",
+                    "$ref": "#/$defs/values/int-boolean",
                     "default": 0,
                     "description": "If 1, The layer will rotate itself to match its animated position path"
                 }
@@ -28,4 +28,3 @@
         }
     ]
 }
-

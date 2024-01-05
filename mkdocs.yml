@@ -1,0 +1,48 @@
+site_name: Lottie Specs
+site_description: Documentation for the Lottie animation format
+extra:
+    lottie_player_version: 5.12.2
+theme:
+    name: cinder
+    custom_dir: tools/theme
+    highlightjs: false
+repo_url: https://github.com/lottie-animation-community/lottie-spec
+edit_uri: https://github.com/lottie-animation-community/lottie-spec/edit/main/docs
+use_directory_urls: true
+site_url: https://lottie-animation-community.github.io/lottie-spec/
+markdown_extensions:
+    # - md_in_html
+    - lottie_markdown
+    # - footnotes
+extra_css:
+    # - /lottie-spec/style/style.css
+    # - /lottie-spec/style/lottie-theme.css
+plugins:
+    - search
+nav:
+    - "Home" : index.md
+    - "Format":
+        - specs/values.md
+        - specs/properties.md
+        - specs/composition.md
+        - specs/layers.md
+        - specs/shapes.md
+        - specs/assets.md
+        - specs/constants.md
+        - specs/helpers.md
+        #
+        - specs/schema.md
+    - "Community":
+        - governance/0._CS_Contributor_License_Agreement.md
+        - governance/1._Community_Specification_License-v1.md
+        - governance/2._Scope.md
+        - governance/3._Notices.md
+        - governance/4._License.md
+        - governance/5._Governance.md
+        - governance/6._Contributing.md
+        - governance/8._Code_of_Conduct.md
+        - governance/FAQ.md
+        - governance/Notices.md
+        - "Contributing":
+            - editing/schema.md
+            - editing/extensions.md

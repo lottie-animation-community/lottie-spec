@@ -6,6 +6,7 @@ import pathlib
 import argparse
 
 from schema_tools.schema import SchemaPath, Schema
+import lottie_markdown
 
 
 class Validator:
@@ -59,6 +60,28 @@ class Validator:
             else:
                 self.collect_defs(child)
 
+    def check_links(self, html_path: pathlib.Path):
+        checked = set()
+        file_cache = {}
+        ts = lottie_markdown.typed_schema(self.root)
+
+        for ref in self.expected_refs:
+            link = ts.from_path(ref).link
+            key = (link.page, link.anchor)
+            if key in checked:
+                continue
+            checked.add(key)
+
+            if link.page not in file_cache:
+                file = html_path / link.page / "index.html"
+                if not file.exists():
+                    self.show_error("%s: Missing page %s" % (ref, link.page))
+                    continue
+                file_cache[link.page] = lxml.html.parse(str(file)).xpath(".//*[@id]/@id")
+
+            if link.anchor not in file_cache[link.page]:
+                self.show_error("%s: Missing anchor %s.md %s" % (ref, link.page, link.anchor))
+
 
 if __name__ == "__main__":
     root = pathlib.Path(__file__).absolute().parent.parent
@@ -70,6 +93,7 @@ if __name__ == "__main__":
         type=pathlib.Path,
         default=root / "docs" / "lottie.schema.json"
     )
+    parser.add_argument("--html", help="Path to the html to check links", type=pathlib.Path)
     args = parser.parse_args()
 
     with open(args.schema) as file:
@@ -77,6 +101,10 @@ if __name__ == "__main__":
 
     validator = Validator()
     validator.validate(data)
+
+    if args.html:
+        import lxml.html
+        validator.check_links(args.html)
 
     if validator.has_error:
         sys.exit(1)

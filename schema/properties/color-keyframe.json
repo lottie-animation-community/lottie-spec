@@ -11,7 +11,7 @@
                 "s": {
                     "title": "Value",
                     "description": "Value at this keyframe.",
-                    "$ref": "#/$defs/helpers/color"
+                    "$ref": "#/$defs/values/color"
                 }
             }
         }

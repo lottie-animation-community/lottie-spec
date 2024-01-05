@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "title": "Multi Dimensional",
+    "title": "Vector Property",
     "description": "An animatable property that holds an array of numbers",
     "oneOf": [
         {
@@ -10,15 +10,13 @@
                 "a": {
                     "title": "Animated",
                     "description": "Whether the property is animated",
-                    "$ref": "#/$defs/helpers/int-boolean",
+                    "$ref": "#/$defs/values/int-boolean",
                     "const": 0
                 },
                 "k": {
-                    "title": "Static value",
-                    "type": "array",
-                    "items": {
-                        "type": "number"
-                    }
+                    "title": "Value",
+                    "description": "Static Value",
+                    "$ref": "#/$defs/values/vector"
                 }
             }
         },
@@ -28,7 +26,7 @@
                 "a": {
                     "title": "Animated",
                     "description": "Whether the property is animated",
-                    "$ref": "#/$defs/helpers/int-boolean",
+                    "$ref": "#/$defs/values/int-boolean",
                     "const": 1
                 },
                 "k": {
@@ -36,7 +34,7 @@
                     "title": "Keyframes",
                     "description": "Array of keyframes",
                     "items": {
-                            "$ref": "#/$defs/properties/vector-keyframe"
+                        "$ref": "#/$defs/properties/vector-keyframe"
                     }
                 }
             }
